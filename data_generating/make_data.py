@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from openai import OpenAI
 from secret import OPENAI_API_KEY, KUBER_PASSWORD
 from prompts import *
@@ -90,8 +91,8 @@ def make_system_prompt(system):
             "Don't make security groups or keypairs."
     return prompt
 
-def make_formatted_prompt(function, additional_command):
-    return = prompt.format( system=system_name, 
+def make_formatted_prompt(prompt, function, additional_command):
+    return prompt.format( system=system_name, 
                             container=container_name, 
                             function=function, 
                             additional_command=additional_command)
@@ -108,7 +109,7 @@ def call_LLM(prompt):
 def make_prompt(lang, function, additional_command, prompt):
     final_prompt = ''
     final_prompt += make_example_mop_prompt()
-    final_prompt += make_formatted_prompt(function, additional_command)
+    final_prompt += make_formatted_prompt(prompt,function, additional_command)
     final_prompt += make_function_prompt(function)
     final_prompt += make_language_prompt(lang)
     final_prompt += make_system_prompt(system_name)
