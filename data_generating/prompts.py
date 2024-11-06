@@ -21,7 +21,7 @@ prompts={
 }
 
 #system_container_list= [['Kubernetes', 'container'], ['OpenStack', 'VM']]
-system_container_list= [['OpenStack', 'VM']]
+system_container_list= [['Kubernetes', 'container']]
 
 #container_list = ['container', 'VM']
 
