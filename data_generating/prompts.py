@@ -20,12 +20,9 @@ prompts={
     ]
 }
 
-#system_container_list= [['Kubernetes', 'container'], ['OpenStack', 'VM']]
-system_container_list= [['Kubernetes', 'container']]
+system_name = 'Kubernetes'
 
-#container_list = ['container', 'VM']
-
-#node_name_list = ['kubeworker1', 'kubeworker2', 'kubeworker3']
+container_name='container'
 
 function_list = ['firewall', 'Haproxy', 'nDPI', 'ntopng', 'Suricata']
 
